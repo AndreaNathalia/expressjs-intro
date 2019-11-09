@@ -20,7 +20,7 @@ $(document).ready(function() {
         console.log(oldName);
         let name = oldName.replace(' ', "");
         if (oldName && name.length > 0) {
-            $.post('/delete-user', {name:newName}, function(data, status) {
+            $.post('/delete-user', {name:name}, function(data, status) {
                 console.log(`${data.message} and status is ${status}`)
                 alert(data.message)
                 setTimeout(function() {
